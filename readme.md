@@ -5,30 +5,12 @@ This program can be run via:
 * `ruby app.rb /path/to/folder` (for `csv` output, saved to `output.csv`)
 * `ruby app.rb /path/to/folder html` (for `html` output, saved to `output.html`)
 
-## App Structure
-Because of the small nature of this example, I've included all of the namepsaced classes
-inline in `app.rb`. However, in a real-world example, the structure would look like:
-
-```
-* /
-** gps_extractor.rb
-** exif_coordinate.rb
-** app.rb
-** /writers
-***  csv_writer.rb
-***  html_writer.rb
-```
-
-with the appropriate `require` statements in `app.rb`.
-
 ## Dependencies
+* libexif (`brew install libexif`)
+* bundler (`gem install bundler`)
 
-### Libexif
-* `brew install libexif`
-* `gem install exif`
-
-### CSV
-* `gem install csv`
+## Installing Required Gems
+* `bundle install` once bundler gem has been installed
 
 ## Technical Considerations
 
