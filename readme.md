@@ -8,6 +8,8 @@ This program can be run via:
 ## App Structure
 Because of the small nature of this example, I've included all of the namepsaced classes
 inline in `app.rb`. However, in a real-world example, the structure would look like:
+
+```
 * /
 ** gps_extractor.rb
 ** exif_coordinate.rb
@@ -15,6 +17,7 @@ inline in `app.rb`. However, in a real-world example, the structure would look l
 ** /writers
 ***  csv_writer.rb
 ***  html_writer.rb
+```
 
 with the appropriate `require` statements in `app.rb`.
 
