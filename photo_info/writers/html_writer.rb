@@ -2,9 +2,9 @@ module PhotoInfo
   require_relative "simple_writer"
 
   class HtmlWriter < SimpleWriter
-    def write
+    def write(filename: "output.html")
       rows = @data.collect do |item|
-        <<-ROW
+        <<~ROW
           <tr>
             <td>#{item[:file]}</td>
             <td>#{item[:longitude]}</td>
@@ -13,7 +13,7 @@ module PhotoInfo
         ROW
       end
 
-      html = <<-HTML
+      html = <<~HTML
         <html>
         <head>
           <title>Extracted Photo GPS Data</title>
@@ -32,7 +32,7 @@ module PhotoInfo
         </body>
       HTML
 
-      File.open("output.html", "w") { |file| file.write(html) }
+      File.open(filename, "w") { |file| file.write(html) }
     end
   end
 end

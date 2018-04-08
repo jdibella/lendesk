@@ -10,7 +10,7 @@ module PhotoInfo
       @data = data
     end
 
-    def write
+    def write(filename:)
       msg = "You must provide an implementation of `write` in the subclass."
       raise ArgumentError, msg
     end
