@@ -10,8 +10,8 @@ RSpec.describe PhotoInfo::ExifDataExtractorService do
       let(:path) { "/Some/Path/here.jpg" }
       let(:fake_data) do
         OpenStruct.new(
-          gps_longitude: [Rational(5/1) ,Rational(5/1), Rational(5/1)],
-          gps_latitude: [Rational(5/1) ,Rational(5/1), Rational(5/1)],
+          gps_longitude: [Rational(1/1), Rational(1/1), Rational(1/1)],
+          gps_latitude: [Rational(1/1), Rational(1/1), Rational(1/1)],
           gps_longitude_ref: "W",
           gps_latitude_ref: "S"
         )

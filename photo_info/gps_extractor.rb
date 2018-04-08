@@ -15,7 +15,7 @@ module PhotoInfo
     def extract(writer: nil)
       writer ||= Object.const_get("PhotoInfo::#{@output.capitalize}Writer")
 
-       # returns array of relative paths
+      # returns array of paths
       photo_paths = PhotoInfo::PathLookupService.where(path: @path, extensions: EXTENSIONS)
 
       data = photo_paths

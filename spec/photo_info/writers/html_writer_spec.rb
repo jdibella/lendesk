@@ -7,7 +7,7 @@ RSpec.describe PhotoInfo::HtmlWriter do
     it "writes a csv file with correct data" do
       subject
       output = File.open("test.html") {|io| io.read }
-      expect(output.strip).to eq expected_html.strip
+      expect(output).to eq expected_html
     end
 
     def expected_html
